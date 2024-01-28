@@ -11,7 +11,13 @@ def dodaj_zadanie():
         aktualizuj_pasek_postepu()  # Aktualizacja paska postępu po dodaniu zadania
     else:
         messagebox.showwarning("Ostrzeżenie", "Proszę wprowadzić jakieś zadanie.")  # Wyświetlenie ostrzeżenia, gdy wprowadzony tekst jest pusty
-
+ # Funkcja usuwająca zaznaczone zadanie z listy
+def usun_zadanie():
+    selected_index = listbox_zadania.curselection()  # Pobranie indeksu zaznaczonego zadania
+    if selected_index:
+        listbox_zadania.delete(selected_index)  # Usunięcie zaznaczonego zadania z listy
+        aktualizuj_pasek_postepu()  # Aktualizacja paska postępu po usunięciu zadania
+        
 # Funkcja zmieniająca kolor tła zaznaczonego zadania na bardzo jasnoniebieski
 def w_trakcie_zadanie():
     selected_index = listbox_zadania.curselection()
