@@ -51,10 +51,10 @@ def aktualizuj_pasek_postepu():
     pasek_postepu.coords(pasek_bialy, blue_width, 0, total_width, 20)  # Ustawienie współrzędnych białego obszaru paska postępu
 
 # Pokazuj gwiazdkę gdy pasek jest całkowicie niebieski, ukryj w przeciwnym razie
-if blue_width == total_width:
-    canvas_gwiazdka.place(relx=0.87, rely=0.878, anchor='se')
-else:
-    canvas_gwiazdka.place_forget()
+    if blue_width == total_width:
+        canvas_gwiazdka.place(relx=0.87, rely=0.878, anchor='se')
+    else:
+        canvas_gwiazdka.place_forget()
 
 # Utworzenie głównego okna
 root = Tk()
