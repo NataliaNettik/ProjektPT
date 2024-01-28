@@ -151,3 +151,15 @@ button_w_trakcie = Button(
     fg='black'
 )
 button_w_trakcie.pack(side=LEFT)
+
+# Utwórz Canvas dla gwiazdki
+canvas_gwiazdka = Canvas(root, width=20, height=20, bg='#034078', highlightthickness=0)
+canvas_gwiazdka.create_text(10, 10, text='★', font=('Helvetica', 12, 'bold'), fill='#FFD700')
+
+# Pasek postępu
+pasek_postepu = Canvas(root, width=435 - 10, height=20, bg='#ffffff', highlightthickness=1, highlightbackground='black')
+pasek_postepu.pack(pady=(0, 10))
+
+# Paski kolorów
+pasek_bialy = pasek_postepu.create_rectangle(0, 0, 0, 20, fill='#ffffff', width=0)
+pasek_niebieski = pasek_postepu.create_rectangle(0, 0, 0, 20, fill='#61a0ff', width=0)
