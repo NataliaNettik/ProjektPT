@@ -163,3 +163,11 @@ pasek_postepu.pack(pady=(0, 10))
 # Paski kolorów
 pasek_bialy = pasek_postepu.create_rectangle(0, 0, 0, 20, fill='#ffffff', width=0)
 pasek_niebieski = pasek_postepu.create_rectangle(0, 0, 0, 20, fill='#61a0ff', width=0)
+
+# Tekst "Twój postęp"
+label_postep = Label(root, text='TWÓJ POSTĘP', font=('Helvetica', 12, 'bold'), bg='#034078', fg='white')
+label_postep.pack()
+
+# Uruchomienie pętli głównej
+root.mainloop()
+
