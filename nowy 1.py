@@ -128,15 +128,4 @@ button_usun = Button(
 )
 button_usun.pack(side=LEFT)
 
-button_wykonane = Button(
-    frame_przyciski,
-    text='Wykonane',
-    command=wykonaj_zadanie,
-    padx=10,
-    pady=5,
-    font=('Helvetica', 14),
-    bg='#3498DB',
-    fg='black'
-)
-button_wykonane.pack(side=LEFT)
 
