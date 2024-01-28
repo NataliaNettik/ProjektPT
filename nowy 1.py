@@ -71,6 +71,27 @@ label_lista_zadan.pack()
 frame_zadania = Frame(root)
 frame_zadania.pack(pady=10)
 
+# Listbox z zadaniami
+listbox_zadania = Listbox(
+    frame_zadania,
+    width=25,
+    height=8,
+    font=('Helvetica', 18),
+    bd=0,
+    fg='#464646',
+    highlightthickness=0,
+    selectbackground='#a6a6a6',
+    activestyle="none",
+)
+listbox_zadania.pack(side=LEFT, fill=BOTH)
+
+# Pasek przewijania dla listy zadań
+scrollbar_zadania = Scrollbar(frame_zadania)
+scrollbar_zadania.pack(side=RIGHT, fill=Y)
+
+listbox_zadania.config(yscrollcommand=scrollbar_zadania.set)
+scrollbar_zadania.config(command=listbox_zadania.yview)
+
 # Ramka przycisków
 frame_przyciski = Frame(root, bg='#61a0ff')
 frame_przyciski.pack(pady=10)
