@@ -92,6 +92,13 @@ scrollbar_zadania.pack(side=RIGHT, fill=Y)
 listbox_zadania.config(yscrollcommand=scrollbar_zadania.set)
 scrollbar_zadania.config(command=listbox_zadania.yview)
 
+# Pole do wprowadzania nowych zadań
+entry_zadanie = Entry(
+    root,
+    font=('Helvetica', 20)
+)
+entry_zadanie.pack(pady=20)
+
 # Ramka przycisków
 frame_przyciski = Frame(root, bg='#61a0ff')
 frame_przyciski.pack(pady=10)
